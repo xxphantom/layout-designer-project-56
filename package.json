@@ -1,0 +1,21 @@
+{
+  "name": "layout-designer-project-58",
+  "version": "0.1.0",
+  "description": "Hexlet Project. Portal Music Box",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xxphantom/layout-designer-project-56"
+  },
+  "main": "",
+  "devDependencies": {
+    "htmlhint": "^1.1.0",
+    "stylelint": "^14.2.0",
+    "stylelint-config-rational-order": "^0.0.4",
+    "stylelint-config-standard": "^24.0.0",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.1.0"
+  },
+  "author": "Dmitriy Gerasimov",
+  "license": "ISC"
+}
