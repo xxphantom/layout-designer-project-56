@@ -3,9 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
   <title>Портал «Music Box» - x_phantom</title>
 </head>
 <body>
-
+  <section class="page-description" id="page-description">
+    <div class="wrapper">
+      <header class="header page-description__header">
+        <div class="logo">
+          <img class="logo__image" src="./images/logo.svg" alt="Логотип в виде ноты">
+          <span class="logo__title">Music Box</span>
+        </div>
+        <nav class="menu header__menu">
+        <ul>
+          <li>Главная</li>
+          <li>Каталог</li>
+          <li>Исполнители</li>
+          <li>Контакты</li>
+        </ul>
+        </nav>
+        <form action="" class="search-form header__search-form">
+          <label class="hidden" for="search-form">Поиск</label>
+          <input class="input search-form__input" type="text" id="search-form" placeholder="Поиск...">
+        </form>
+      </header>
+      <div class="main-description">
+        <h1>Онлайн музыка где угодно</h1>
+        <h2 class="mb-16">Без ограничений</h2>
+        <span class="main-description__text">Получите доступ всего за несколько шагов. Заполните форму ниже и откройте мир музыки</span>
+        <form id="access-form" action="" class="access-form mt-16">
+         <label class="hidden" for="name">Имя</label>
+         <input class="input access-form__input" type="text" id="name" placeholder="Имя">
+         <label class="hidden" for="email">Email</label>
+         <input class="input access-form__input" type="email" id="email" placeholder="Email">
+         <button class="button access-form__button" type="submit" form="access-form">Получить доступ</button>
+        </form>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
