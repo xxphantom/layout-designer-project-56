@@ -1,3 +1,6 @@
+/* Colors */
+
+/* Breakpoints */
 @font-face {
   font-weight: 400;
   font-family: Roboto;
@@ -180,6 +183,8 @@ h2 {
 }
 
 .main-description {
+  margin: 78px 0 200px;
+
   text-align: center;
 }
 

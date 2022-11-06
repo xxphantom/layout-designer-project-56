@@ -1,8 +1,7 @@
-
 .page-description {
   background: url("../images/banner.png") no-repeat;
-  background-size: cover;
   background-position: center;
+  background-size: cover;
 }
 
 .header {
@@ -21,52 +20,50 @@
         gap: 24px;
       }
     }
-
   }
 }
 
 .logo {
   display: flex;
-  align-items: center;
   gap: 16px;
+  align-items: center;
 
   &-image {
     width: 24px;
   }
-
 }
 
 .search-form {
   display: flex;
 
   &-input {
-    height: 25px;
 
     flex-grow: 1;
+    height: 25px;
+    padding: 5px 10px;
 
     background-color: $dark;
     border-radius: 50px;
-    padding: 5px 10px;
-
   }
 
   @include media(min, $bp-large) {
-    margin-left: auto;
     width: 248px;
+    margin-left: auto;
   }
 }
 
 .main-description {
+  margin: 78px 0 200px;
+
   text-align: center;
 
   @include media(min, $bp-large) {
-    margin: 200px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 200px 0;
   }
 }
-
 
 .access-form {
   display: flex;
@@ -79,39 +76,38 @@
   &-input {
     min-width: 270px;
     min-height: 50px;
+    margin-bottom: 1.5rem;
 
     padding-left: 20px;
-    margin-bottom: 1.5rem;
+
+    background-color: transparent;
 
     border: 2px solid $dark-gray;
     border-radius: 3px;
 
-    background-color: transparent;
-
     &::placeholder {
       color: $white;
-      font-size: 14px;
       font-weight: 700;
+      font-size: 14px;
     }
   }
 
   &-button {
     padding: 20px 30px;
 
-    background-color: $green;
-
     text-transform: uppercase;
+
+    background-color: $green;
 
     border-radius: 5px;
   }
 
   @include media(min, $bp-large) {
     display: grid;
+    grid-template-columns: 2;
     gap: 24px;
 
     width: 570px;
-    grid-template-columns: 2;
-
 
     &-button {
       grid-column: span 2;

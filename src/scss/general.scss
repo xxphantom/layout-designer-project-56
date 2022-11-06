@@ -1,14 +1,16 @@
 @font-face {
   font-weight: 400;
   font-family: Roboto;
-  src: local("Roboto Regular"),
+  src:
+    local("Roboto Regular"),
     url("../fonts/Roboto-Regular.woff2") format("woff2");
 }
 
 @font-face {
   font-weight: 700;
   font-family: Roboto;
-  src: local("Roboto Bold"),
+  src:
+    local("Roboto Bold"),
     url("../fonts/Roboto-Bold.woff2") format("woff2");
 }
 
@@ -16,11 +18,13 @@
   $media-rule: "#{$min-max}-width";
 
   @media ($media-rule: $screen-size) {
-    @content
+    @content;
   }
 }
 
 body {
+  margin: 0;
+
   color: $dark-gray;
 
   font-size: 18px;
@@ -28,7 +32,6 @@ body {
   line-height: 1.5;
 
   background-color: $bg-color;
-  margin: 0;
 }
 
 a {
@@ -44,12 +47,16 @@ li {
   list-style-type: none;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: 700;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0;
+
   line-height: 1.5;
   text-transform: uppercase;
 }
@@ -90,9 +97,9 @@ h2 {
 
 /* General Classes */
 
-
 .button {
   color: inherit;
+
   border: none;
 
   cursor: pointer;
@@ -118,8 +125,8 @@ h2 {
 @include media(min, $bp-large) {
   .wrapper {
     max-width: 1200px;
-    padding: 25px;
     margin: 0 auto;
+    padding: 25px;
   }
 
   h1 {
@@ -130,4 +137,3 @@ h2 {
     font-size: 38px;
   }
 }
-
