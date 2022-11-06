@@ -1,0 +1,15 @@
+.footer {
+  background-image: linear-gradient(265.08deg, #95390C 14.9%, #5328A1 68.95%);
+}
+
+.social {
+  display: flex;
+  gap: 24px;
+}
+
+.wrapper-footer {
+  @include media(min, $bp-large) {
+    display: flex;
+    justify-content: space-between;
+  }
+}

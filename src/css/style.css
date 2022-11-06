@@ -1,5 +1,3 @@
-/* stylelint-disable selector-class-pattern */
-
 @font-face {
   font-weight: 400;
   font-family: Roboto;
@@ -23,30 +21,92 @@ body {
   background-color: #08020d;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
 h1,
 h2 {
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
   margin: 0;
 
-  font-weight: 700;
   line-height: 1.5;
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 1239px) {
-  .wrapper {
-    padding: 27px 20px;
-  }
-
-  h1 {
-    font-size: 30px;
-  }
-
-  h2 {
-    font-size: 18px;
-  }
+h1 {
+  font-size: 30px;
 }
 
-@media screen and (min-width: 850px) {
+h2 {
+  font-size: 18px;
+}
+
+.text-size-1 {
+  font-size: 16px;
+}
+
+/* Atomic classes */
+.hidden {
+  display: none;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.col-white {
+  color: #fff;
+}
+
+.col-gray {
+  color: #e0e0e0;
+}
+
+/* General Classes */
+.button {
+  color: inherit;
+
+  border: none;
+  cursor: pointer;
+}
+
+.input {
+  box-sizing: border-box;
+
+  font-size: inherit;
+  font-family: inherit;
+
+  border: none;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.wrapper {
+  padding: 27px 20px;
+}
+
+@media (min-width: 850px) {
   .wrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -63,8 +123,6 @@ h2 {
 }
 
 .page-description {
-  color: #fff;
-
   background: url("../images/banner.png") no-repeat;
   background-position: center;
   background-size: cover;
@@ -76,8 +134,19 @@ h2 {
   text-transform: uppercase;
 }
 
-.page-description__header {
-  margin-bottom: 78px;
+@media (min-width: 850px) {
+  .header {
+    display: flex;
+  }
+
+  .header-menu {
+    margin-left: 90px;
+  }
+
+  .header-menu ul {
+    display: flex;
+    gap: 24px;
+  }
 }
 
 .logo {
@@ -86,48 +155,15 @@ h2 {
   align-items: center;
 }
 
-.logo__image {
+.logo-image {
   width: 24px;
-}
-
-.menu ul {
-  padding: 0;
-}
-
-.menu li {
-  list-style-type: none;
-}
-
-.hidden {
-  display: none;
-}
-
-.mt-16 {
-  margin-top: 16px;
-}
-
-.mb-16 {
-  margin-bottom: 16px;
-}
-
-.input {
-  box-sizing: border-box;
-
-  font-size: inherit;
-  font-family: inherit;
-
-  border: none;
-}
-
-.input:focus {
-  outline: none;
 }
 
 .search-form {
   display: flex;
 }
 
-.search-form__input {
+.search-form-input {
   flex-grow: 1;
   height: 25px;
   padding: 5px 10px;
@@ -136,12 +172,24 @@ h2 {
   border-radius: 50px;
 }
 
+@media (min-width: 850px) {
+  .search-form {
+    width: 248px;
+    margin-left: auto;
+  }
+}
+
 .main-description {
   text-align: center;
 }
 
-.main-description__text {
-  font-size: 16px;
+@media (min-width: 850px) {
+  .main-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 200px 0;
+  }
 }
 
 .access-form {
@@ -149,32 +197,28 @@ h2 {
   flex-direction: column;
 }
 
-.access-form__input {
+.access-form-label {
+  display: none;
+}
+
+.access-form-input {
   min-width: 270px;
   min-height: 50px;
   margin-bottom: 1.5rem;
   padding-left: 20px;
-
-  color: #fff;
 
   background-color: transparent;
   border: 2px solid #cacaca;
   border-radius: 3px;
 }
 
-.access-form__input::placeholder {
+.access-form-input::placeholder {
   color: #fff;
   font-weight: 700;
   font-size: 14px;
 }
 
-.button {
-  color: inherit;
-
-  border: none;
-}
-
-.access-form__button {
+.access-form-button {
   padding: 20px 30px;
 
   text-transform: uppercase;
@@ -183,32 +227,7 @@ h2 {
   border-radius: 5px;
 }
 
-@media screen and (min-width: 850px) {
-  .page-description__header {
-    display: flex;
-  }
-
-  .main-description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 200px 0;
-  }
-
-  .header__menu {
-    margin-left: 90px;
-  }
-
-  .header__menu ul {
-    display: flex;
-    gap: 24px;
-  }
-
-  .header__search-form {
-    width: 248px;
-    margin-left: auto;
-  }
-
+@media (min-width: 850px) {
   .access-form {
     display: grid;
     grid-template-columns: 2;
@@ -216,7 +235,23 @@ h2 {
     width: 570px;
   }
 
-  .access-form__button {
+  .access-form-button {
     grid-column: span 2;
+  }
+}
+
+.footer {
+  background-image: linear-gradient(265.08deg, #95390c 14.9%, #5328a1 68.95%);
+}
+
+.social {
+  display: flex;
+  gap: 24px;
+}
+
+@media (min-width: 850px) {
+  .wrapper-footer {
+    display: flex;
+    justify-content: space-between;
   }
 }
