@@ -69,8 +69,24 @@ h2 {
   font-size: 18px;
 }
 
+.text-small {
+  font-size: 12.8px;
+}
+
 .text-size-1 {
   font-size: 16px;
+}
+
+.text-size-2 {
+  font-size: 24px;
+}
+
+.text-size-3 {
+  font-size: 32px;
+}
+
+.text-size-7 {
+  font-size: 64px;
 }
 
 /* Atomic classes */
@@ -87,6 +103,10 @@ h2 {
   margin-bottom: 16px;
 }
 
+.pt-100 {
+  padding-top: 100px;
+}
+
 .col-white {
   color: $white;
 }
@@ -95,12 +115,20 @@ h2 {
   color: $gray;
 }
 
+.txt-al-center {
+  text-align: center;
+}
+
 /* General Classes */
 
 .button {
+  padding: 20px 30px;
+
   color: inherit;
+  text-transform: uppercase;
 
   border: none;
+  border-radius: 5px;
 
   cursor: pointer;
 }
@@ -119,14 +147,16 @@ h2 {
 }
 
 .wrapper {
-  padding: 27px 20px;
+  position: relative;
+
+  padding: 0 20px;
 }
 
 @include media(min, $bp-large) {
   .wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 25px;
+    padding: 0 25px;
   }
 
   h1 {

@@ -1,0 +1,62 @@
+.pricing-cards {
+  @include media(min, $bp-large) {
+    display: flex;
+    gap: 47px;
+  }
+}
+
+.pricing-card {
+  margin: 50px 0;
+  padding: 24px 1.5rem 0;
+  overflow: hidden;
+
+  border-radius: 1rem;
+}
+
+.pricing-value {
+  position: relative;
+
+  margin: 200px 0 40px;
+
+  &::after {
+    position: relative;
+    top: -20px;
+    left: 0.3em;
+
+    font-size: 32px;
+    text-transform: uppercase;
+
+    content: "руб.";
+  }
+}
+
+.pricing-button {
+  display: block;
+
+  text-align: center;
+
+  background-color: transparent;
+  border: 1px solid $white;
+}
+
+.pricing-footer {
+  margin: 64px 0;
+}
+
+.bg-free {
+  background: url("../images/subscribe_1.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-standart {
+  background: url("../images/subscribe_2.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-premium {
+  background: url("../images/subscribe_3.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}

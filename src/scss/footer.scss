@@ -1,4 +1,6 @@
 .footer {
+  position: relative;
+
   background-image: linear-gradient(265.08deg, #95390c 14.9%, #5328a1 68.95%);
 }
 
@@ -7,9 +9,39 @@
   gap: 24px;
 }
 
-.wrapper-footer {
+.footer-top {
+  display: grid;
+  gap: 14px;
+
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
   @include media(min, $bp-large) {
-    display: flex;
+    grid-template-columns: repeat(2, auto);
+  }
+
+  @include media(min, $bp-desktop) {
+    grid-template-columns: repeat(4, auto);
+    gap: 24px;
     justify-content: space-between;
+  }
+}
+
+.footer-line {
+  border-top: 1px solid $gray;
+}
+
+.footer-bottom {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  &-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include media(min, $bp-large) {
+      flex-direction: row;
+    }
   }
 }
