@@ -129,7 +129,6 @@ h2 {
   padding: 20px 30px;
 
   color: inherit;
-  text-transform: uppercase;
 
   border: none;
   border-radius: 5px;
@@ -275,6 +274,8 @@ h2 {
 }
 
 .access-form-btn {
+  text-transform: uppercase;
+
   background-color: #34c176;
 }
 
@@ -325,6 +326,7 @@ h2 {
   display: block;
 
   text-align: center;
+  text-transform: uppercase;
 
   background-color: transparent;
   border: 1px solid #fff;
@@ -400,6 +402,8 @@ h2 {
   margin-top: 48px;
   padding: 16px 30px;
 
+  text-transform: uppercase;
+
   border: 1px solid #fff;
 }
 
@@ -433,6 +437,8 @@ h2 {
 .app-btn {
   display: inline-block;
   padding: 16px 40px;
+
+  color: #fff;
 
   background-color: #95390c;
   border-radius: 32px;
