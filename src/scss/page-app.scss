@@ -1,0 +1,35 @@
+.page-app {
+  display: grid;
+
+  @include media(min, $bp-large) {
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.app-title {
+  @include media(min, $bp-large) {
+    grid-column: span 2;
+  }
+}
+
+.app-description {
+  @extend %text-size-1;
+}
+
+.app-image {
+  justify-self: center;
+
+  @include media(min, $bp-large) {
+    order: 1;
+  }
+}
+
+.app-btn {
+  display: inline-block;
+  padding: 16px 40px;
+
+  background-color: $red;
+
+  border-radius: 32px;
+}

@@ -1,7 +1,5 @@
-.page-description {
-  background: url("../images/banner.png") no-repeat;
-  background-position: center;
-  background-size: cover;
+.bg-description {
+  @include bg-image("../images/banner.png");
 }
 
 .header {
@@ -66,6 +64,10 @@
     align-items: center;
     padding: 200px 0;
   }
+
+  &-subtitle {
+    @extend %text-size-1;
+  }
 }
 
 .access-form {
@@ -95,7 +97,7 @@
     }
   }
 
-  &-button {
+  &-btn {
     background-color: $green;
   }
 
@@ -105,7 +107,7 @@
 
     width: 570px;
 
-    &-button {
+    &-btn {
       grid-column: span 2;
     }
   }
