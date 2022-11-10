@@ -205,9 +205,15 @@ h4 {
 }
 
 %items-wrapper {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: start;
   padding-top: 48px;
+
+  @include media(min, 600px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   column-gap: 50px;
   row-gap: 25px;
