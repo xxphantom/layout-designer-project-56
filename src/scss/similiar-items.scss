@@ -1,0 +1,17 @@
+.similiar-items {
+  @extend %items-wrapper;
+}
+
+.similiar-item {
+  @extend %item;
+  text-align: center;
+}
+
+.similiar-img {
+  @extend %item-img;
+  border-radius: 50%;
+}
+
+.similiar-title {
+  @extend %item-title;
+}

@@ -1,0 +1,37 @@
+.popular-tracks {
+  display: grid;
+  padding-top: 48px;
+  row-gap: 25px;
+
+  @include media(min, $bp-large) {
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 50px;
+  }
+}
+
+.popular-track {
+  display: flex;
+  gap: 15px;
+}
+
+.track-poster {
+  width: 55px;
+  height: 55px;
+}
+
+.track-info {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.track-info,
+.track-title {
+  @extend %text-small;
+}
+
+.track-title {
+  color: $white;
+}

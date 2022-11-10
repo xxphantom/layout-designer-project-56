@@ -50,7 +50,8 @@ h2 {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   margin: 0;
 
   line-height: 1.5;
@@ -65,11 +66,22 @@ h2 {
   font-size: 18px;
 }
 
+h3 {
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+.track-info,
+.track-title,
 .news-author,
 .pricing-footer {
   font-size: 12.8px;
 }
 
+.artist-subtitle,
 .app-description,
 .news-body,
 .page-pricing-text,
@@ -171,6 +183,42 @@ h2 {
   h2 {
     font-size: 38px;
   }
+
+  h3 {
+    font-size: 24px;
+  }
+}
+
+.similiar-items,
+.discography {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 48px;
+
+  column-gap: 50px;
+  row-gap: 25px;
+}
+
+.similiar-item,
+.discography-item {
+  width: 137px;
+}
+
+@media (min-width: 900px) {
+  .similiar-item,
+  .discography-item {
+    width: 250px;
+  }
+}
+
+.similiar-img,
+.discography-img {
+  margin-bottom: 18px;
+}
+
+.similiar-title,
+.album-title {
+  font-weight: 700;
 }
 
 .bg-description {
@@ -442,6 +490,96 @@ h2 {
 
   background-color: #95390c;
   border-radius: 32px;
+}
+
+.bg-artist {
+  background: url("../images/Morten Harket.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.artist-description {
+  padding-top: 225px;
+  padding-bottom: 225px;
+}
+
+.artist-subtitle {
+  display: block;
+}
+
+.artist-form {
+  display: grid;
+  gap: 1.5rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 850px) {
+  .artist-form {
+    grid-template-columns: repeat(2, max-content);
+  }
+}
+
+.artist-form-btn {
+  display: flex;
+  width: 200px;
+}
+
+.artist-form-btn-play {
+  background-color: #5328a1;
+}
+
+.artist-form-btn-like {
+  background-color: #95390c;
+}
+
+.artist-form-btn-img {
+  width: 24px;
+  margin-right: 16px;
+
+  filter: invert(1);
+}
+
+.popular-tracks {
+  display: grid;
+  padding-top: 48px;
+  row-gap: 25px;
+}
+
+@media (min-width: 850px) {
+  .popular-tracks {
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 50px;
+  }
+}
+
+.popular-track {
+  display: flex;
+  gap: 15px;
+}
+
+.track-poster {
+  width: 55px;
+  height: 55px;
+}
+
+.track-info {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.track-title {
+  color: #fff;
+}
+
+.similiar-item {
+  text-align: center;
+}
+
+.similiar-img {
+  border-radius: 50%;
 }
 
 .footer {

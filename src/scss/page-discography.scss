@@ -1,0 +1,15 @@
+.discography {
+  @extend %items-wrapper;
+}
+
+.discography-item {
+  @extend %item;
+}
+
+.discography-img {
+  @extend %item-img;
+}
+
+.album-title {
+  @extend %item-title;
+}
