@@ -133,6 +133,7 @@ h4 {
   padding: 20px 30px;
 
   color: inherit;
+  font-family: inherit;
 
   border: none;
   border-radius: 5px;
@@ -525,7 +526,11 @@ h4 {
 
 .artist-form-btn {
   display: flex;
+  align-items: center;
   width: 200px;
+
+  font-size: 12.8px;
+  text-transform: uppercase;
 }
 
 .artist-form-btn-play {

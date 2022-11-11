@@ -25,7 +25,12 @@
 
   &-btn {
     display: flex;
+    align-items: center;
+
     width: 200px;
+
+    font-size: 12.8px;
+    text-transform: uppercase;
   }
 
   &-btn-play {
