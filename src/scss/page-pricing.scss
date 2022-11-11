@@ -14,7 +14,7 @@
 }
 
 .pricing-value {
-  @extend %text-size-7;
+  @include text-size-7;
   position: relative;
 
   margin: 200px 0 40px;
@@ -24,7 +24,7 @@
     top: -20px;
     left: 0.3em;
 
-    @extend %text-size-3;
+    @include text-size-3;
     text-transform: uppercase;
 
     content: "руб.";

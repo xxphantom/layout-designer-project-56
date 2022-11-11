@@ -93,14 +93,6 @@ h4 {
   font-size: 24px;
 }
 
-.pricing-value::after {
-  font-size: 32px;
-}
-
-.pricing-value {
-  font-size: 64px;
-}
-
 .hidden {
   display: none;
 }
@@ -367,6 +359,8 @@ h4 {
   position: relative;
 
   margin: 200px 0 40px;
+
+  font-size: 64px;
 }
 
 .pricing-value::after {
@@ -374,6 +368,7 @@ h4 {
   top: -20px;
   left: 0.3em;
 
+  font-size: 32px;
   text-transform: uppercase;
 
   content: "руб.";
