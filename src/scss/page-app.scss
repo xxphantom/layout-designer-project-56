@@ -14,7 +14,7 @@
 }
 
 .app-description {
-  @extend %text-size-1;
+  font-size: $text-size-1;
 }
 
 .app-image {

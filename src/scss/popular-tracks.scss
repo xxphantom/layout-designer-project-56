@@ -4,15 +4,14 @@
   row-gap: 25px;
 
   @include media(min, $bp-large) {
-    grid-template-columns: 1fr 1fr;
-
-    column-gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 .popular-track {
   display: flex;
   gap: 15px;
+  padding-right: 50px;
 }
 
 .track-poster {
@@ -29,7 +28,7 @@
 
 .track-info,
 .track-title {
-  @extend %text-small;
+  font-size: $text-small;
 }
 
 .track-title {

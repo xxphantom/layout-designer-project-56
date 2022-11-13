@@ -15,3 +15,8 @@
 .similiar-title {
   @extend %item-title;
 }
+
+.similiar-subtitle {
+  @extend %item-subtitle;
+  line-height: 1.45;
+}

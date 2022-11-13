@@ -1,18 +1,19 @@
+/* stylelint-disable selector-class-pattern */
+
 @font-face {
-  font-weight: 400;
   font-family: Roboto;
   src:
     local("Roboto Regular"),
     url("../fonts/Roboto-Regular.woff2") format("woff2");
 }
 
-@font-face {
-  font-weight: 700;
-  font-family: Roboto;
-  src:
-    local("Roboto Bold"),
-    url("../fonts/Roboto-Bold.woff2") format("woff2");
-}
+// @font-face {
+//   font-weight: 700;
+//   font-family: Roboto;
+//   src:
+//     local("Roboto Bold"),
+//     url("../fonts/Roboto-Bold.woff2") format("woff2");
+// }
 
 @mixin media($min-max, $screen-size) {
   $media-rule: "#{$min-max}-width";
@@ -22,9 +23,7 @@
   }
 }
 
-body {
-  margin: 0;
-
+.page {
   color: $dark-gray;
 
   font-size: 18px;
@@ -32,6 +31,10 @@ body {
   line-height: 1.5;
 
   background-color: $bg-color;
+}
+
+.page__body {
+  margin: 0;
 }
 
 img {
@@ -43,17 +46,9 @@ a {
   text-decoration: none;
 }
 
-ul {
-  padding: 0;
-}
-
-li {
-  list-style-type: none;
-}
-
 h1,
 h2 {
-  font-weight: 700;
+  font-weight: bold;
 }
 
 h1,
@@ -71,35 +66,34 @@ h1 {
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 1rem;
 }
 
 h3 {
   font-size: 16px;
 }
 
+@include media(min, $bp-large) {
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 38px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+}
+
 h4 {
   font-size: 18px;
 }
 
-%text-small {
-  font-size: 12.8px;
-}
-
-%text-size-1 {
-  font-size: 16px;
-}
-
-.text-size-2 {
-  font-size: 24px;
-}
-
-@mixin text-size-3 {
-  font-size: 32px;
-}
-
-@mixin text-size-7 {
-  font-size: 64px;
+.flex-center {
+  display: flex;
+  justify-content: center;
 }
 
 // Atomic classes
@@ -116,6 +110,10 @@ h4 {
   margin-bottom: 16px;
 }
 
+.mt-24 {
+  margin-top: 24px;
+}
+
 .mb-48 {
   margin-bottom: 48px;
 }
@@ -128,12 +126,16 @@ h4 {
   padding-bottom: 100px;
 }
 
-.col-white {
-  color: $white;
+.mb-100 {
+  margin-bottom: 100px;
 }
 
 .col-gray {
   color: $gray;
+}
+
+.col-white {
+  color: $white;
 }
 
 .txt-al-center {
@@ -141,6 +143,14 @@ h4 {
 }
 
 // General Classes
+
+.menu {
+  padding: 0;
+
+  li {
+    list-style-type: none;
+  }
+}
 
 .btn {
   padding: 20px 30px;
@@ -155,9 +165,6 @@ h4 {
 }
 
 .input {
-  box-sizing: border-box;
-
-  font-size: inherit;
   font-family: inherit;
 
   border: none;
@@ -167,48 +174,33 @@ h4 {
   }
 }
 
-.wrapper {
-  position: relative;
+.main-wrapper {
+  flex-grow: 1;
 
   padding-right: 20px;
-
   padding-left: 20px;
+
+  @include media(min, $bp-large) {
+    max-width: 1240px;
+  }
 }
 
-@include media(min, $bp-large) {
-  .wrapper {
-    max-width: 1200px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 25px;
-    padding-left: 25px;
-  }
-
-  h1 {
-    font-size: 60px;
-  }
-
-  h2 {
-    font-size: 38px;
-  }
-
-  h3 {
-    font-size: 24px;
-  }
+.flex-al-center {
+  display: flex;
+  align-items: center;
 }
 
 // Mixins
 
 @mixin bg-image($url, $position: center, $size: cover) {
   background: url("#{$url}") no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: $position;
+  background-size: $size;
 }
 
 %items-wrapper {
   display: grid;
   grid-template-columns: repeat(2, max-content);
-  justify-content: start;
   padding-top: 48px;
 
   @include media(min, 600px) {
@@ -229,9 +221,18 @@ h4 {
 }
 
 %item-img {
-  margin-bottom: 18px;
+  display: block;
+  margin-bottom: 20px;
 }
 
 %item-title {
   font-weight: 700;
+  font-size: 18px;
+  text-transform: none;
+}
+
+%item-subtitle {
+  margin: 0;
+
+  font-size: $text-size-1;
 }
