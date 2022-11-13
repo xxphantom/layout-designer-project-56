@@ -29,7 +29,7 @@
 
 .track-info,
 .track-title {
-  @extend %text-small;
+  font-size: $text-small;
 }
 
 .track-title {

@@ -1,5 +1,11 @@
+// Global
+
 @import "variables";
+@import "box-model";
 @import "general";
+
+// Modules
+
 @import "page-description";
 @import "page-pricing";
 @import "page-news";

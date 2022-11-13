@@ -30,7 +30,7 @@
 }
 
 .news-body {
-  @extend %text-size-1;
+  font-size: $text-size-1;
 }
 
 .news-author {
@@ -38,9 +38,9 @@
   gap: 16px;
   align-items: center;
 
-  text-transform: uppercase;
+  font-size: $text-small;
 
-  @extend %text-small;
+  text-transform: uppercase;
 
   &-name {
     color: $orange;

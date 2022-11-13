@@ -1,64 +1,83 @@
-.pricing-cards {
+.page-pricing {
+  &__title {
+    margin-bottom: 48px;
+  }
+
+  &__text {
+    display: block;
+    margin-top: 40px;
+
+    font-size: $text-size-1;
+  }
+
+  &__cards {
+    display: grid;
+    gap: 50px;
+  }
+
   @include media(min, $bp-large) {
-    display: flex;
-    gap: 47px;
+    &__cards {
+      grid-auto-flow: column;
+    }
   }
 }
 
 .pricing-card {
-  margin: 50px 0;
-  padding: 24px 1.5rem 0;
-  overflow: hidden;
+  padding: 24px 1.5rem;
 
   border-radius: 1rem;
-}
 
-.pricing-value {
-  @include text-size-7;
-  position: relative;
+  &__title {
+    font-weight: 400;
+  }
 
-  margin: 200px 0 40px;
+  &__value {
 
-  &::after {
+    margin-top: 200px;
+    margin-bottom: 40px;
+
+    font-size: $text-size-7;
+    line-height: 1;
+  }
+
+  &__value::after {
     position: relative;
-    top: -20px;
-    left: 0.3em;
+    left: 16px;
 
-    @include text-size-3;
+    font-size: $text-size-3;
+    line-height: 1.5;
     text-transform: uppercase;
+    vertical-align: top;
 
     content: "руб.";
   }
-}
 
-.pricing-btn {
-  display: block;
+  &__btn {
+    display: block;
 
-  text-align: center;
-  text-transform: uppercase;
+    text-align: center;
+    text-transform: uppercase;
 
-  background-color: transparent;
-  border: 1px solid $white;
-}
+    background-color: transparent;
+    border: 1px solid $white;
+  }
 
-.pricing-footer {
-  margin: 64px 0;
+  &__footer {
+    margin-top: 64px;
+    margin-bottom: 40px;
 
-  @extend %text-small;
-}
+    font-size: $text-small;
+  }
 
-.page-pricing-text {
-  @extend %text-size-1;
-}
+  &--free {
+    @include bg-image("../images/subscribe_1.png");
+  }
 
-.bg-free {
-  @include bg-image("../images/subscribe_1.png");
-}
+  &--standart {
+    @include bg-image("../images/subscribe_2.png");
+  }
 
-.bg-standart {
-  @include bg-image("../images/subscribe_2.png");
-}
-
-.bg-premium {
-  @include bg-image("../images/subscribe_3.png");
+  &--premium {
+    @include bg-image("../images/subscribe_3.png");
+  }
 }

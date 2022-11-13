@@ -1,5 +1,5 @@
 .bg-artist {
-  @include bg-image("../images/Morten Harket.png");
+  @include bg-image("../images/Morten_Harket.png");
 }
 
 .artist-description {
@@ -10,7 +10,7 @@
 .artist-subtitle {
   display: block;
 
-  @extend %text-size-1;
+  font-size: $text-size-1;
 }
 
 .artist-form {
