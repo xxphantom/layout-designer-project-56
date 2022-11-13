@@ -33,6 +33,7 @@
   &__input::placeholder {
     font-size: 13.3px;
     font-family: Arial, sans-serif;
+    letter-spacing: -0.03em;
     text-transform: uppercase;
   }
 }
@@ -73,13 +74,17 @@
 }
 
 .main-description {
-  padding: 250px 0 200px;
+  padding: 247px 0 200px;
 
   @include media(min, $bp-large) {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 200px 0;
+
+    &__h2 {
+      margin-bottom: 14px;
+    }
   }
 
   &__subtitle {
