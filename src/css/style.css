@@ -167,8 +167,6 @@ h4 {
     max-width: 1200px;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 25px;
-    padding-left: 25px;
   }
 }
 
@@ -344,9 +342,12 @@ h4 {
   color: #fff;
   font-weight: 700;
   font-size: 14px;
+  letter-spacing: -0.03em;
 }
 
 .access-form__btn {
+  height: 60px;
+
   text-transform: uppercase;
 
   background-color: #34c176;

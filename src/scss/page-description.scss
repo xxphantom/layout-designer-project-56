@@ -120,9 +120,12 @@
     color: $white;
     font-weight: 700;
     font-size: 14px;
+    letter-spacing: -0.03em;
   }
 
   &__btn {
+    height: 60px;
+
     text-transform: uppercase;
 
     background-color: $green;
