@@ -142,9 +142,6 @@ h4 {
 }
 
 .input {
-  box-sizing: border-box;
-
-  font-size: inherit;
   font-family: inherit;
 
   border: none;
@@ -258,6 +255,7 @@ h4 {
 
 .search__input::placeholder {
   font-size: 13.3px;
+  font-family: Arial, sans-serif;
   text-transform: uppercase;
 }
 
@@ -268,7 +266,7 @@ h4 {
   left: 20px;
 
   display: grid;
-  row-gap: 18px;
+  row-gap: 16px;
 }
 
 .header__menu {
@@ -312,6 +310,9 @@ h4 {
 }
 
 .main-description__subtitle {
+  margin-top: 16px;
+  margin-bottom: 17px;
+
   font-size: 16px;
 }
 
@@ -326,7 +327,7 @@ h4 {
 
 .access-form__input {
   min-height: 50px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
   padding-left: 20px;
 
   background-color: transparent;

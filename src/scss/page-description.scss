@@ -32,6 +32,7 @@
 
   &__input::placeholder {
     font-size: 13.3px;
+    font-family: Arial, sans-serif;
     text-transform: uppercase;
   }
 }
@@ -43,7 +44,7 @@
   left: 20px;
 
   display: grid;
-  row-gap: 18px;
+  row-gap: 16px;
 
   &__menu {
     margin-top: 0;
@@ -82,6 +83,9 @@
   }
 
   &__subtitle {
+    margin-top: 16px;
+    margin-bottom: 17px;
+
     font-size: $text-size-1;
   }
 }
@@ -97,7 +101,7 @@
   &__input {
     min-height: 50px;
 
-    margin-bottom: 1.5rem;
+    margin-bottom: 24px;
 
     padding-left: 20px;
 
