@@ -92,14 +92,7 @@ h4 {
   font-size: 18px;
 }
 
-#page-description,
-#artist-description,
-#page-pricing,
-#page-news,
-#page-app,
-#page-discography,
-#page-popular-track,
-#page-similar {
+.flex-center {
   display: flex;
   justify-content: center;
 }
@@ -185,16 +178,11 @@ h4 {
 .main-wrapper {
   flex-grow: 1;
 
-  @include media(max, 1230px) {
-    padding-right: 20px;
-    padding-left: 20px;
-  }
+  padding-right: 20px;
+  padding-left: 20px;
 
   @include media(min, $bp-large) {
-    max-width: 1200px;
-
-    // margin-right: auto;
-    // margin-left: auto;
+    max-width: 1240px;
   }
 }
 
