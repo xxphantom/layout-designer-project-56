@@ -92,6 +92,18 @@ h4 {
   font-size: 18px;
 }
 
+#page-description,
+#artist-description,
+#page-pricing,
+#page-news,
+#page-app,
+#page-discography,
+#page-popular-track,
+#page-similar {
+  display: flex;
+  justify-content: center;
+}
+
 // Atomic classes
 
 .hidden {
@@ -171,7 +183,7 @@ h4 {
 }
 
 .main-wrapper {
-  position: relative;
+  flex-grow: 1;
 
   @include media(max, 1230px) {
     padding-right: 20px;
@@ -180,8 +192,9 @@ h4 {
 
   @include media(min, $bp-large) {
     max-width: 1200px;
-    margin-right: auto;
-    margin-left: auto;
+
+    // margin-right: auto;
+    // margin-left: auto;
   }
 }
 
