@@ -69,14 +69,14 @@
   }
 
   &--free {
-    @include bg-image("../images/subscribe_1.png");
+    @include bg-image("../images/subscribe_1.png", "top center");
   }
 
   &--standart {
-    @include bg-image("../images/subscribe_2.png");
+    @include bg-image("../images/subscribe_2.png", "top center");
   }
 
   &--premium {
-    @include bg-image("../images/subscribe_3.png");
+    @include bg-image("../images/subscribe_3.png", "top center");
   }
 }

@@ -43,7 +43,12 @@
   top: 25px;
 
   display: grid;
+  width: calc(100% - 40px);
   row-gap: 16px;
+
+  @include media(min, 1240px) {
+    width: 1200px;
+  }
 
   &__menu {
     margin-top: 0;

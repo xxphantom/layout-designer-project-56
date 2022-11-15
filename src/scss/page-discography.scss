@@ -13,3 +13,8 @@
 .album-title {
   @extend %item-title;
 }
+
+.album-year {
+  @extend %item-subtitle;
+  line-height: 1.4;
+}

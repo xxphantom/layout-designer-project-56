@@ -1,20 +1,19 @@
 /* stylelint-disable selector-class-pattern */
 
 @font-face {
-  font-weight: 400;
   font-family: Roboto;
   src:
     local("Roboto Regular"),
     url("../fonts/Roboto-Regular.woff2") format("woff2");
 }
 
-@font-face {
-  font-weight: 700;
-  font-family: Roboto;
-  src:
-    local("Roboto Bold"),
-    url("../fonts/Roboto-Bold.woff2") format("woff2");
-}
+// @font-face {
+//   font-weight: 700;
+//   font-family: Roboto;
+//   src:
+//     local("Roboto Bold"),
+//     url("../fonts/Roboto-Bold.woff2") format("woff2");
+// }
 
 @mixin media($min-max, $screen-size) {
   $media-rule: "#{$min-max}-width";
@@ -202,7 +201,6 @@ h4 {
 %items-wrapper {
   display: grid;
   grid-template-columns: repeat(2, max-content);
-  justify-content: start;
   padding-top: 48px;
 
   @include media(min, 600px) {
@@ -223,9 +221,18 @@ h4 {
 }
 
 %item-img {
-  margin-bottom: 18px;
+  display: block;
+  margin-bottom: 20px;
 }
 
 %item-title {
   font-weight: 700;
+  font-size: 18px;
+  text-transform: none;
+}
+
+%item-subtitle {
+  margin: 0;
+
+  font-size: $text-size-1;
 }
