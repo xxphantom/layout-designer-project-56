@@ -7,15 +7,14 @@
 /* stylelint-disable selector-class-pattern */
 @font-face {
   font-family: Roboto;
-  src: local("Roboto Regular"), url("../fonts/Roboto-Regular.woff2") format("woff2");
+  src: local("Roboto Regular"), local("Roboto-Regular"), url("../fonts/Roboto-Regular.woff2") format("woff2");
+  font-display: swap;
 }
-
 .page {
   color: #cacaca;
   font-size: 18px;
   font-family: Roboto, sans-serif;
   line-height: 1.5;
-
   background-color: #08020d;
 }
 
@@ -42,7 +41,6 @@ h2,
 h3,
 h4 {
   margin: 0;
-
   line-height: 1.5;
   text-transform: uppercase;
 }
@@ -63,16 +61,13 @@ h3 {
   h1 {
     font-size: 60px;
   }
-
   h2 {
     font-size: 38px;
   }
-
   h3 {
     font-size: 24px;
   }
 }
-
 h4 {
   font-size: 18px;
 }
@@ -129,17 +124,14 @@ h4 {
 .menu {
   padding: 0;
 }
-
 .menu li {
   list-style-type: none;
 }
 
 .btn {
   padding: 20px 30px;
-
   color: inherit;
   font-family: inherit;
-
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -147,10 +139,8 @@ h4 {
 
 .input {
   font-family: inherit;
-
   border: none;
 }
-
 .input:focus {
   outline: none;
 }
@@ -160,7 +150,6 @@ h4 {
   padding-right: 20px;
   padding-left: 20px;
 }
-
 @media (min-width: 850px) {
   .main-wrapper {
     max-width: 1240px;
@@ -172,58 +161,47 @@ h4 {
   align-items: center;
 }
 
-.similiar-items,
-.discography {
+.similiar-items, .discography {
   display: grid;
   grid-template-columns: repeat(2, max-content);
   padding-top: 48px;
-
   column-gap: 50px;
   row-gap: 25px;
 }
-
 @media (min-width: 600px) {
-  .similiar-items,
-  .discography {
+  .similiar-items, .discography {
     display: flex;
     flex-wrap: wrap;
   }
 }
 
-.similiar-item,
-.discography-item {
+.similiar-item, .discography-item {
   width: 137px;
 }
-
 @media (min-width: 900px) {
-  .similiar-item,
-  .discography-item {
+  .similiar-item, .discography-item {
     width: 250px;
   }
 }
 
-.similiar-img,
-.discography-img {
+.similiar-img, .discography-img {
   display: block;
   margin-bottom: 20px;
 }
 
-.similiar-title,
-.album-title {
+.similiar-title, .album-title {
   font-weight: 700;
   font-size: 18px;
   text-transform: none;
 }
 
-.similiar-subtitle,
-.album-year {
+.similiar-subtitle, .album-year {
   margin: 0;
-
   font-size: 16px;
 }
 
 .page-description {
-  background: url("../images/banner.png") no-repeat;
+  background: url("../images/banner.webp") no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -231,7 +209,6 @@ h4 {
 .logo {
   gap: 16px;
 }
-
 .logo__image {
   width: 24px;
 }
@@ -240,23 +217,19 @@ h4 {
   display: flex;
   align-items: center;
 }
-
 .search__input {
   flex-grow: 1;
   min-width: 48px;
   height: 28px;
   padding: 5px 10px;
-
   background-color: #3c3b3d;
   border-radius: 50px;
 }
-
 @media (min-width: 850px) {
   .search__input {
     min-width: 248px;
   }
 }
-
 .search__input::placeholder {
   font-size: 13.3px;
   font-family: Arial, sans-serif;
@@ -267,39 +240,31 @@ h4 {
 .header {
   position: absolute;
   top: 25px;
-
   display: grid;
   width: calc(100% - 40px);
   row-gap: 16px;
 }
-
 @media (min-width: 1240px) {
   .header {
     width: 1200px;
   }
 }
-
 .header__menu {
   margin-top: 0;
   margin-bottom: 0;
 }
-
 .header__text {
   font-size: 11px;
   text-transform: uppercase;
 }
-
 @media (min-width: 850px) {
   .header {
     grid-template-columns: max-content min-content 1fr;
-
     column-gap: 90px;
   }
-
   .header__search {
     justify-self: end;
   }
-
   .header__menu {
     display: flex;
     gap: 24px;
@@ -309,7 +274,6 @@ h4 {
 .main-description {
   padding: 247px 0 200px;
 }
-
 @media (min-width: 850px) {
   .main-description {
     display: flex;
@@ -317,16 +281,13 @@ h4 {
     align-items: center;
     padding: 200px 0;
   }
-
   .main-description__h2 {
     margin-bottom: 14px;
   }
 }
-
 .main-description__subtitle {
   margin-top: 16px;
   margin-bottom: 17px;
-
   font-size: 16px;
 }
 
@@ -334,44 +295,34 @@ h4 {
   display: flex;
   flex-direction: column;
 }
-
 .access-form__label {
   display: none;
 }
-
 .access-form__input {
   min-height: 50px;
   margin-bottom: 24px;
   padding-left: 20px;
-
   background-color: transparent;
   border: 2px solid #cacaca;
   border-radius: 3px;
 }
-
 .access-form__input::placeholder {
   color: #fff;
   font-weight: 700;
   font-size: 14px;
   letter-spacing: -0.03em;
 }
-
 .access-form__btn {
   height: 60px;
-
   text-transform: uppercase;
-
   background-color: #34c176;
 }
-
 @media (min-width: 850px) {
   .access-form {
     display: grid;
     width: 570px;
-
     column-gap: 24px;
   }
-
   .access-form__btn {
     grid-column: span 2;
   }
@@ -380,19 +331,15 @@ h4 {
 .page-pricing__title {
   margin-bottom: 48px;
 }
-
 .page-pricing__text {
   display: block;
   margin-top: 40px;
-
   font-size: 16px;
 }
-
 .page-pricing__cards {
   display: grid;
   gap: 50px;
 }
-
 @media (min-width: 850px) {
   .page-pricing__cards {
     grid-auto-columns: 1fr;
@@ -402,63 +349,49 @@ h4 {
 
 .pricing-card {
   padding: 0 24px;
-
   border-radius: 0.9rem;
 }
-
 .pricing-card__title {
   margin-top: 1em;
-
   font-weight: 400;
 }
-
 .pricing-card__value {
   margin-top: 200px;
   margin-bottom: 40px;
-
   font-size: 64px;
   line-height: 1;
 }
-
 .pricing-card__currency {
   font-size: 32px;
   line-height: 1.5;
   text-transform: uppercase;
   vertical-align: top;
 }
-
 .pricing-card__btn {
   display: block;
-
   font-size: 16px;
   text-align: center;
   text-transform: uppercase;
-
   background-color: transparent;
   border: 1px solid #fff;
 }
-
 .pricing-card__footer {
   margin-top: 64px;
   margin-bottom: 64px;
-
   font-size: 12.8px;
 }
-
 .pricing-card--free {
-  background: url("../images/subscribe_1.png") no-repeat;
+  background: url("../images/subscribe_1.webp") no-repeat;
   background-position: "top center";
   background-size: cover;
 }
-
 .pricing-card--standart {
-  background: url("../images/subscribe_2.png") no-repeat;
+  background: url("../images/subscribe_2.webp") no-repeat;
   background-position: "top center";
   background-size: cover;
 }
-
 .pricing-card--premium {
-  background: url("../images/subscribe_3.png") no-repeat;
+  background: url("../images/subscribe_3.webp") no-repeat;
   background-position: "top center";
   background-size: cover;
 }
@@ -477,17 +410,14 @@ h4 {
   font-weight: 400;
   text-transform: none;
 }
-
 @media (max-width: 849px) {
   .news-title {
     margin: 42px 0 16px;
   }
 }
-
 @media (min-width: 850px) {
   .news-title {
     margin: 0 0 30px;
-
     font-size: 30px;
   }
 }
@@ -497,18 +427,15 @@ h4 {
     display: grid;
     grid-auto-flow: dense;
     grid-template-columns: repeat(2, 1fr);
-
     column-gap: 50px;
   }
 }
-
 .news-item:nth-child(even) .news-image {
   grid-column-start: 2;
 }
 
 .news-text {
   margin: 0;
-
   font-size: 16px;
 }
 
@@ -516,11 +443,9 @@ h4 {
   display: flex;
   gap: 16px;
   align-items: center;
-
   font-size: 12.8px;
   text-transform: uppercase;
 }
-
 .news-author-name {
   color: #f89202;
 }
@@ -529,17 +454,14 @@ h4 {
   display: inline-block;
   margin-top: 48px;
   padding: 16px 30px;
-
   font-size: 12.8px;
   text-transform: uppercase;
-
   border: 1px solid #fff;
 }
 
 .page-app {
   display: grid;
 }
-
 @media (min-width: 850px) {
   .page-app {
     grid-template-rows: repeat(2, auto);
@@ -560,7 +482,6 @@ h4 {
 .app-image {
   justify-self: center;
 }
-
 @media (min-width: 850px) {
   .app-image {
     order: 1;
@@ -570,15 +491,13 @@ h4 {
 .app-btn {
   display: inline-block;
   padding: 16px 40px;
-
   color: #fff;
-
   background-color: #95390c;
   border-radius: 32px;
 }
 
 .bg-artist {
-  background: url("../images/Morten_Harket.png") no-repeat;
+  background: url("../images/Morten_Harket.webp") no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -587,7 +506,6 @@ h4 {
   padding-top: 225px;
   padding-bottom: 225px;
 }
-
 @media (min-width: 850px) {
   .artist-description {
     padding-top: 250px;
@@ -596,46 +514,37 @@ h4 {
 
 .artist-subtitle {
   display: block;
-
   font-size: 16px;
 }
 
 .artist-form {
   display: grid;
   box-sizing: border-box;
-
   column-gap: 24px;
   row-gap: 1.5rem;
 }
-
 @media (min-width: 850px) {
   .artist-form {
     grid-template-columns: repeat(2, max-content);
   }
 }
-
 .artist-form-btn {
   display: flex;
   align-items: center;
   width: 200px;
-
   font-size: 12.8px;
   text-transform: uppercase;
 }
-
 .artist-form-btn-play {
   background-color: #5328a1;
 }
-
 .artist-form-btn-like {
   background-color: #95390c;
 }
-
 .artist-form-btn-img {
   width: 20px;
   height: 20px;
   margin-right: 16px;
-
   filter: invert(1);
 }
 
@@ -644,7 +553,6 @@ h4 {
   padding-top: 48px;
   row-gap: 25px;
 }
-
 @media (min-width: 850px) {
   .popular-tracks {
     grid-template-columns: repeat(2, 1fr);
@@ -698,19 +606,14 @@ h4 {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-
   background: linear-gradient(89.75deg, #5328a1 32.83%, #95390c 81.56%);
 }
-
 .footer-title {
   margin-bottom: 14px;
-
   font-size: 18px;
 }
-
 .footer-menu {
   margin: 0;
-
   font-size: 16px;
 }
 
@@ -726,13 +629,11 @@ h4 {
   padding-top: 64px;
   padding-bottom: 47px;
 }
-
 @media (min-width: 850px) {
   .footer-top {
     grid-template-columns: repeat(2, auto);
   }
 }
-
 @media (min-width: 965px) {
   .footer-top {
     grid-template-columns: repeat(4, 1fr);
@@ -743,7 +644,6 @@ h4 {
 
 .footer-line {
   width: 100%;
-
   border-top: 1px solid #fff;
 }
 
@@ -752,25 +652,23 @@ h4 {
   padding-top: 41px;
   padding-bottom: 50px;
 }
-
 @media (min-width: 850px) {
   .footer-bottom {
     padding-top: 40px;
     padding-bottom: 48px;
   }
 }
-
 .footer-bottom-menu {
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin: 0;
-
   font-size: 16px;
 }
-
 @media (min-width: 850px) {
   .footer-bottom-menu {
     flex-direction: row;
   }
 }
+
+/*# sourceMappingURL=style.css.map */
