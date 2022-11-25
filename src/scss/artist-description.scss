@@ -37,6 +37,13 @@
 
     font-size: 12.8px;
     text-transform: uppercase;
+
+    transition: $tr-filter;
+  }
+
+  &-btn:hover,
+  &-btn:focus-visible {
+    filter: $bright-95;
   }
 
   &-btn-play {

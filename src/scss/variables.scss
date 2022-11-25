@@ -23,3 +23,16 @@ $text-size-1: 16px;
 $text-size-2: 24px;
 $text-size-3: 32px;
 $text-size-7: 64px;
+
+// Other vars
+
+$focus-shadow-white: 0 0 4px 0 rgb(255 255 255 / 90%);
+
+// Animation
+
+$tr-time: 0.15s;
+$tr-filter: filter ease-in-out $tr-time;
+
+// Animation Effect
+
+$bright-95: brightness(95%);

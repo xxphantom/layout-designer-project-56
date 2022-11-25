@@ -28,6 +28,10 @@ img {
   max-width: 100%;
 }
 
+figure {
+  margin: 0;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -83,8 +87,10 @@ h4 {
   justify-content: center;
 }
 
-.hidden {
-  display: none;
+.visually-hidden {
+  position: fixed;
+
+  transform: scale(0);
 }
 
 .mt-16 {
@@ -147,25 +153,22 @@ h4 {
 }
 
 .input {
+  color: #fff;
   font-family: inherit;
 
   border: none;
 }
 
-.input:focus {
-  outline: none;
+*:focus-visible {
+  outline: 1px solid #fff;
+  box-shadow: 0 0 4px 0 rgb(255 255 255 / 90%);
 }
 
 .main-wrapper {
   flex-grow: 1;
+  max-width: 1240px;
   padding-right: 20px;
   padding-left: 20px;
-}
-
-@media (min-width: 850px) {
-  .main-wrapper {
-    max-width: 1240px;
-  }
 }
 
 .flex-al-center {
@@ -225,7 +228,7 @@ h4 {
 
 .page-description {
   background: url("../images/banner.webp") no-repeat;
-  background-position: center;
+  background-position: top center;
   background-size: cover;
 }
 
@@ -283,6 +286,14 @@ h4 {
 .header__menu {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.header__menu-item:hover,
+.header__menu-item:focus-visible {
+  color: #f89202;
+
+  outline-offset: 3px;
+  box-shadow: none;
 }
 
 .header__text {
@@ -345,6 +356,8 @@ h4 {
   margin-bottom: 24px;
   padding-left: 20px;
 
+  font-size: 16px;
+
   background-color: transparent;
   border: 2px solid #cacaca;
   border-radius: 3px;
@@ -363,6 +376,13 @@ h4 {
   text-transform: uppercase;
 
   background-color: #34c176;
+
+  transition: filter ease-in-out 0.15s;
+}
+
+.access-form__btn:hover,
+.access-form__btn:focus-visible {
+  filter: brightness(95%);
 }
 
 @media (min-width: 850px) {
@@ -405,6 +425,8 @@ h4 {
   padding: 0 24px;
 
   border-radius: 0.9rem;
+
+  transition: transform ease-in-out 0.15s;
 }
 
 .pricing-card__title {
@@ -437,6 +459,14 @@ h4 {
 
   background-color: transparent;
   border: 1px solid #fff;
+  outline-offset: 0;
+
+  transition: background-color ease-in-out 0.15s;
+}
+
+.pricing-card__btn:hover,
+.pricing-card__btn:focus {
+  background-color: rgb(0 0 0 / 10%);
 }
 
 .pricing-card__footer {
@@ -448,20 +478,26 @@ h4 {
 
 .pricing-card--free {
   background: url("../images/subscribe_1.webp") no-repeat;
-  background-position: "top center";
+  background-position: top center;
   background-size: cover;
 }
 
 .pricing-card--standart {
   background: url("../images/subscribe_2.webp") no-repeat;
-  background-position: "top center";
+  background-position: top center;
   background-size: cover;
 }
 
 .pricing-card--premium {
   background: url("../images/subscribe_3.webp") no-repeat;
-  background-position: "top center";
+  background-position: top center;
   background-size: cover;
+}
+
+@media (min-width: 850px) {
+  .pricing-card:hover {
+    transform: scale(1.02);
+  }
 }
 
 .news-items {
@@ -535,6 +571,12 @@ h4 {
   text-transform: uppercase;
 
   border: 1px solid #fff;
+  outline-offset: 0;
+}
+
+.news-btn:hover,
+.news-btn:focus-visible {
+  color: #fff;
 }
 
 .page-app {
@@ -578,9 +620,14 @@ h4 {
   border-radius: 32px;
 }
 
+.app-btn:hover,
+.app-btn:focus-visible {
+  filter: brightness(95%);
+}
+
 .bg-artist {
   background: url("../images/Morten_Harket.webp") no-repeat;
-  background-position: center;
+  background-position: top center;
   background-size: cover;
 }
 
@@ -622,6 +669,13 @@ h4 {
 
   font-size: 12.8px;
   text-transform: uppercase;
+
+  transition: filter ease-in-out 0.15s;
+}
+
+.artist-form-btn:hover,
+.artist-form-btn:focus-visible {
+  filter: brightness(95%);
 }
 
 .artist-form-btn-play {
@@ -774,4 +828,14 @@ h4 {
   .footer-bottom-menu {
     flex-direction: row;
   }
+}
+
+.footer-item:hover,
+.footer-item:focus {
+  color: #fff;
+}
+
+.footer-item:hover > .footer-img,
+.footer-item:focus > .footer-img {
+  filter: contrast(2);
 }

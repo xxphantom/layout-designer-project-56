@@ -34,4 +34,9 @@
   background-color: $red;
 
   border-radius: 32px;
+
+  &:hover,
+  &:focus-visible {
+    filter: $bright-95;
+  }
 }

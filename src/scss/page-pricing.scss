@@ -28,6 +28,8 @@
 
   border-radius: 0.9rem;
 
+  transition: transform ease-in-out 0.15s;
+
   &__title {
     margin-top: 1em;
 
@@ -59,6 +61,14 @@
 
     background-color: transparent;
     border: 1px solid $white;
+    outline-offset: 0;
+
+    transition: background-color ease-in-out 0.15s;
+  }
+
+  &__btn:hover,
+  &__btn:focus {
+    background-color: rgb(0 0 0 / 10%);
   }
 
   &__footer {
@@ -69,14 +79,20 @@
   }
 
   &--free {
-    @include bg-image("../images/subscribe_1.webp", "top center");
+    @include bg-image("../images/subscribe_1.webp");
   }
 
   &--standart {
-    @include bg-image("../images/subscribe_2.webp", "top center");
+    @include bg-image("../images/subscribe_2.webp");
   }
 
   &--premium {
-    @include bg-image("../images/subscribe_3.webp", "top center");
+    @include bg-image("../images/subscribe_3.webp");
+  }
+
+  @include media(min, $bp-large) {
+    &:hover {
+      transform: scale(1.02);
+    }
   }
 }

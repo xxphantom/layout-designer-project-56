@@ -9,14 +9,6 @@
   font-display: swap;
 }
 
-// @font-face {
-//   font-weight: 700;
-//   font-family: Roboto;
-//   src:
-//     local("Roboto Bold"),
-//     url("../fonts/Roboto-Bold.woff2") format("woff2");
-// }
-
 @mixin media($min-max, $screen-size) {
   $media-rule: "#{$min-max}-width";
 
@@ -41,6 +33,10 @@
 
 img {
   max-width: 100%;
+}
+
+figure {
+  margin: 0;
 }
 
 a {
@@ -100,8 +96,10 @@ h4 {
 
 // Atomic classes
 
-.hidden {
-  display: none;
+.visually-hidden {
+  position: fixed;
+
+  transform: scale(0);
 }
 
 .mt-16 {
@@ -167,24 +165,23 @@ h4 {
 }
 
 .input {
+  color: $white;
   font-family: inherit;
 
   border: none;
+}
 
-  &:focus {
-    outline: none;
-  }
+*:focus-visible {
+  outline: 1px solid $white;
+  box-shadow: $focus-shadow-white;
 }
 
 .main-wrapper {
   flex-grow: 1;
+  max-width: 1240px;
 
   padding-right: 20px;
   padding-left: 20px;
-
-  @include media(min, $bp-large) {
-    max-width: 1240px;
-  }
 }
 
 .flex-al-center {
@@ -194,7 +191,7 @@ h4 {
 
 // Mixins
 
-@mixin bg-image($url, $position: center, $size: cover) {
+@mixin bg-image($url, $size: cover, $position: top center) {
   background: url("#{$url}") no-repeat;
   background-position: $position;
   background-size: $size;

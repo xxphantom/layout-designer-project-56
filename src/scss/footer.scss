@@ -74,3 +74,14 @@
     }
   }
 }
+
+.footer-item {
+  &:hover,
+  &:focus {
+    color: $white;
+
+    > .footer-img {
+      filter: contrast(2);
+    }
+  }
+}

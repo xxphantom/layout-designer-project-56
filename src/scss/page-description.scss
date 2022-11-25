@@ -55,6 +55,14 @@
     margin-bottom: 0;
   }
 
+  &__menu-item:hover,
+  &__menu-item:focus-visible {
+    color: $orange;
+
+    outline-offset: 3px;
+    box-shadow: none;
+  }
+
   &__text {
     font-size: $text-extra-small;
     text-transform: uppercase;
@@ -110,8 +118,9 @@
     min-height: 50px;
 
     margin-bottom: 24px;
-
     padding-left: 20px;
+
+    font-size: $text-size-1;
 
     background-color: transparent;
 
@@ -132,6 +141,13 @@
     text-transform: uppercase;
 
     background-color: $green;
+
+    transition: $tr-filter;
+  }
+
+  &__btn:hover,
+  &__btn:focus-visible {
+    filter: $bright-95;
   }
 
   @include media(min, $bp-large) {
