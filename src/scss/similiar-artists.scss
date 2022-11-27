@@ -1,20 +1,22 @@
-.discography {
+.similiar-artists {
   @extend %figure-items-wrapper;
 }
 
-.album {
+.artist-item {
   @extend %figure-item;
+  text-align: center;
 
-  .poster {
+  .artist-photo {
     @extend %figure-item-img;
+    border-radius: 50%;
   }
 
   .title {
     @extend %figure-item-title;
   }
 
-  .year {
+  .count {
     @extend %figure-item-subtitle;
-    line-height: 1.4;
+    line-height: 1.45;
   }
 }

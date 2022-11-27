@@ -1,91 +1,9 @@
-.page-description {
+.bg-description {
   @include bg-image("../images/banner.webp");
 }
 
-.logo {
-  gap: 16px;
-
-  &__image {
-    width: 24px;
-  }
-}
-
-.search {
-  display: flex;
-  align-items: center;
-
-  &__input {
-
-    flex-grow: 1;
-
-    min-width: 48px;
-    height: 28px;
-    padding: 5px 10px;
-
-    background-color: $dark;
-    border-radius: 50px;
-
-    @include media(min, $bp-large) {
-      min-width: 248px;
-    }
-  }
-
-  &__input::placeholder {
-    font-size: 13.3px;
-    font-family: Arial, sans-serif;
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
-  }
-}
-
-.header {
-  position: absolute;
-  top: 25px;
-
-  display: grid;
-  width: calc(100% - 40px);
-  row-gap: 16px;
-
-  @include media(min, 1240px) {
-    width: 1200px;
-  }
-
-  &__menu {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  &__menu-item:hover,
-  &__menu-item:focus-visible {
-    color: $orange;
-
-    outline-offset: 3px;
-    box-shadow: none;
-  }
-
-  &__text {
-    font-size: $text-extra-small;
-    text-transform: uppercase;
-  }
-
-  @include media(min, $bp-large) {
-    grid-template-columns: max-content min-content 1fr;
-
-    column-gap: 90px;
-
-    &__search {
-      justify-self: end;
-    }
-
-    &__menu {
-      display: flex;
-      gap: 24px;
-    }
-  }
-}
-
 .main-description {
-  padding: 247px 0 200px;
+  padding: 248px 0 200px; // 247
 
   @include media(min, $bp-large) {
     display: flex;
@@ -93,14 +11,14 @@
     align-items: center;
     padding: 200px 0;
 
-    &__h2 {
+    h2 {
       margin-bottom: 14px;
     }
   }
 
-  &__subtitle {
-    margin-top: 16px;
-    margin-bottom: 17px;
+  .subtitle {
+    // margin-top: 16px;
+    // margin-bottom: 17px;
 
     font-size: $text-size-1;
   }
@@ -110,11 +28,18 @@
   display: flex;
   flex-direction: column;
 
-  &__label {
-    display: none;
+  @include media(min, $bp-large) {
+    display: grid;
+    width: 570px;
+
+    column-gap: 24px;
+
+    .btn {
+      grid-column: span 2;
+    }
   }
 
-  &__input {
+  .input {
     min-height: 50px;
 
     margin-bottom: 24px;
@@ -128,14 +53,14 @@
     border-radius: 3px;
   }
 
-  &__input::placeholder {
+  .input::placeholder {
     color: $white;
     font-weight: 700;
     font-size: 14px;
     letter-spacing: -0.03em;
   }
 
-  &__btn {
+  .access-btn {
     height: 60px;
 
     text-transform: uppercase;
@@ -145,20 +70,8 @@
     transition: $tr-filter;
   }
 
-  &__btn:hover,
-  &__btn:focus-visible {
-    filter: $bright-95;
-  }
-
-  @include media(min, $bp-large) {
-    display: grid;
-
-    width: 570px;
-
-    column-gap: 24px;
-
-    &__btn {
-      grid-column: span 2;
-    }
+  .access-btn:hover,
+  .access-btn:focus-visible {
+    filter: $bright-90;
   }
 }

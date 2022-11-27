@@ -12,25 +12,23 @@
   display: flex;
   gap: 15px;
   padding-right: 50px;
-}
 
-.track-poster {
-  width: 55px;
-  height: 55px;
-}
-
-.track-info {
-  display: flex;
-  flex-grow: 1;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.track-info,
-.track-title {
   font-size: $text-small;
-}
 
-.track-title {
-  color: $white;
+  .track-poster {
+    width: 55px;
+    height: 55px;
+  }
+
+  .track-info {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .track-title {
+    color: $white;
+    font-size: inherit;
+  }
 }

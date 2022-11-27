@@ -1,5 +1,3 @@
-/* stylelint-disable selector-class-pattern */
-
 @font-face {
   font-family: Roboto;
   src:
@@ -17,7 +15,7 @@
   }
 }
 
-.page {
+html {
   color: $dark-gray;
 
   font-size: 18px;
@@ -27,12 +25,21 @@
   background-color: $bg-color;
 }
 
-.page__body {
+body {
   margin: 0;
 }
 
 img {
   max-width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style-type: none;
+  }
 }
 
 figure {
@@ -138,19 +145,11 @@ h4 {
   color: $white;
 }
 
-.txt-al-center {
+.text-al-center {
   text-align: center;
 }
 
 // General Classes
-
-.menu {
-  padding: 0;
-
-  li {
-    list-style-type: none;
-  }
-}
 
 .btn {
   padding: 20px 30px;
@@ -197,7 +196,7 @@ h4 {
   background-size: $size;
 }
 
-%items-wrapper {
+%figure-items-wrapper {
   display: grid;
   grid-template-columns: repeat(2, max-content);
   padding-top: 48px;
@@ -211,27 +210,29 @@ h4 {
   row-gap: 25px;
 }
 
-%item {
+%figure-item {
   width: 137px;
+
+  font-size: $text-size-1;
 
   @include media(min, 900px) {
     width: 250px;
   }
 }
 
-%item-img {
+%figure-item-img {
   display: block;
   margin-bottom: 20px;
 }
 
-%item-title {
+%figure-item-title {
+
+  color: $white;
   font-weight: 700;
   font-size: 18px;
   text-transform: none;
 }
 
-%item-subtitle {
+%figure-item-subtitle {
   margin: 0;
-
-  font-size: $text-size-1;
 }

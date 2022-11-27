@@ -1,42 +1,40 @@
 .page-app {
   display: grid;
 
-  @include media(min, $bp-large) {
-    grid-template-rows: repeat(2, auto);
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.app-title {
-  @include media(min, $bp-large) {
-    grid-column: span 2;
-  }
-}
-
-.app-description {
   font-size: $text-size-1;
-}
-
-.app-image {
-  justify-self: center;
 
   @include media(min, $bp-large) {
-    order: 1;
+    grid-template: repeat(2, auto) / repeat(2, 1fr);
+
+    .app-image {
+      order: 1;
+    }
   }
-}
 
-.app-btn {
-  display: inline-block;
-  padding: 16px 40px;
+  .app-image {
+    justify-self: center;
+  }
 
-  color: $white;
+  h2 {
+    @include media(min, $bp-large) {
+      grid-column: span 2;
+    }
+  }
 
-  background-color: $red;
+  .app-btn {
+    display: inline-block;
+    padding: 16px 40px;
 
-  border-radius: 32px;
+    color: $white;
 
-  &:hover,
-  &:focus-visible {
-    filter: $bright-95;
+    background-color: $red;
+    border-radius: 32px;
+
+    transition: $tr-filter;
+
+    &:hover,
+    &:focus-visible {
+      filter: $bright-90;
+    }
   }
 }

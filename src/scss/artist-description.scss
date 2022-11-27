@@ -9,10 +9,6 @@
   @include media(min, $bp-large) {
     padding-top: 250px;
   }
-}
-
-.artist-subtitle {
-  display: block;
 
   font-size: $text-size-1;
 }
@@ -29,7 +25,7 @@
     grid-template-columns: repeat(2, max-content);
   }
 
-  &-btn {
+  .btn {
     display: flex;
     align-items: center;
 
@@ -37,28 +33,28 @@
 
     font-size: 12.8px;
     text-transform: uppercase;
+    column-gap: 16px;
 
     transition: $tr-filter;
-  }
 
-  &-btn:hover,
-  &-btn:focus-visible {
-    filter: $bright-95;
-  }
+    img {
+      width: 20px;
+      height: 20px;
 
-  &-btn-play {
-    background-color: $purple;
-  }
+      filter: invert(1);
+    }
 
-  &-btn-like {
-    background-color: $red;
-  }
+    &.play {
+      background-color: $purple;
+    }
 
-  &-btn-img {
-    width: 20px;
-    height: 20px;
-    margin-right: 16px;
+    &.like {
+      background-color: $red;
+    }
 
-    filter: invert(1);
+    &:hover,
+    &:focus-visible {
+      filter: $bright-90;
+    }
   }
 }
